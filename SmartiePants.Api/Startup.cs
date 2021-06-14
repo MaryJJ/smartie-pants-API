@@ -40,7 +40,7 @@ namespace SmartiePants.Api
         {
             builder.RegisterType<HttpClientService>().As<IHttpClientService>().InstancePerDependency();
             builder.RegisterType<UserService>().As<IUserService>().InstancePerDependency();
-            builder.RegisterType<PlacementMockService>().As<IPlacementService>().InstancePerDependency();
+            builder.RegisterType<PlacementService>().As<IPlacementService>().InstancePerDependency();
         }
 
         public void ConfigureProductionContainer(ContainerBuilder builder)
