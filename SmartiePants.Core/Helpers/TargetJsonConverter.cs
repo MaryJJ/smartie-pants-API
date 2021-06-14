@@ -11,13 +11,13 @@ namespace SmartiePants.Core.Helpers
         protected override TargetDto Create(Type objectType, JObject jObject)
         {
             if (jObject == null) throw new ArgumentNullException("JObject");
-            if (!string.IsNullOrEmpty(jObject["countryCodes"].ToString()))
+            if (jObject["countryCodes"] != null && !string.IsNullOrEmpty(jObject["countryCodes"].ToString()))
             {
                 return new EcpmTargetDto();
             }
             else
             {
-                if (!string.IsNullOrEmpty(jObject["global"].ToString()))
+                if (jObject["global"] != null && !string.IsNullOrEmpty(jObject["global"].ToString()))
                 {
                     return new GlobalTargetDto();
                 }
