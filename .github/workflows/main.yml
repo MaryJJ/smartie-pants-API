@@ -17,6 +17,7 @@ jobs:
         files: '${{ github.workspace }}/SmartiePants.Api/appsettings.json'
       env:
         ConnectionStrings.Default: ${{ secrets.CONNECTION_STRING }}
+        UnityAPI.Token: ${{ secrets.UNITY_API_TOKEN }}
         
     - name: Build and deploy the Docker image
       env: 
