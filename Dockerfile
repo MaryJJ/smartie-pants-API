@@ -13,7 +13,7 @@ COPY . .
 # publish
 FROM build AS publish
 WORKDIR /src/SmartiePants.Api
-RUN dotnet publish -c Release -o /src/publish /p:EnvironmentName=Development
+RUN dotnet publish -c Debug -o /src/publish /p:EnvironmentName=Development
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
