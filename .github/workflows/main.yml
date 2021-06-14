@@ -18,6 +18,7 @@ jobs:
       env:
         ConnectionStrings.Default: ${{ secrets.CONNECTION_STRING }}
         UnityAPI.Token: ${{ secrets.UNITY_API_TOKEN }}
+        Jwt.Secret : ${{ secrets.JWT_SECRET }}
         
     - name: Build and deploy the Docker image
       env: 
