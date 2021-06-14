@@ -29,13 +29,15 @@ Configure the variables in appsettings.json file.
   "UnityAPI": {
     "Token": "UNITY_API_TOKEN" 
   },
-  // Variables to create jwt Token for API authentication
+  
+  // Variables to create jwt Token for authentication with the API
   "Jwt": {
     "Issuer": "https://smartie-pants-api.herokuapp.com", 
     "Secret": "JWT_SECRET",
     "ExpirationInDays": 30
   },
-  // Configuration of connection with database
+  
+  // Database connection settings
   "ConnectionStrings": {
     "Default": "CONNECTION_STRING"
   },
