@@ -47,7 +47,7 @@ namespace SmartiePants.Api
         {
             builder.RegisterType<HttpClientService>().As<IHttpClientService>().InstancePerDependency();
             builder.RegisterType<UserService>().As<IUserService>().InstancePerDependency();
-            builder.RegisterType<PlacementService>().As<IPlacementService>().InstancePerDependency();
+            builder.RegisterType<PlacementMockService>().As<IPlacementService>().InstancePerDependency();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
